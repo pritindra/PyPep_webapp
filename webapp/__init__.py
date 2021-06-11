@@ -22,8 +22,8 @@ def create_app():
 
     with app.app_context():
         # TODO - register blueprints here. e.g.
-        # from .routes import auth_blueprint
-        # app.register_blueprint(auth_blueprint)
+        from .routes import auth_blueprint
+        app.register_blueprint(auth_blueprint)
 
 
         # TODO register commands here e.g.
@@ -38,6 +38,6 @@ def create_app():
         def index():
             # TODO - add here endpoint of resource where you want to land on page load. e.g.
             # return redirect(url_for("auth_blueprint.home"))
-            return render_template("index.html")
+            return render_template("base.html")
 
     return app
