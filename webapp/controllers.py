@@ -17,7 +17,6 @@ def flash_errors(form):
             ), 'error')
 
 
-# e.g. only peptools
 
 class PepTool:
     def __init__(self, prot_sequence, monoisotopic=False):
